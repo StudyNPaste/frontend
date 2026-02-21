@@ -1,0 +1,64 @@
+.services {
+	padding: 28px 20px 60px;
+}
+
+.services > div:first-child {
+	max-width: 900px;
+	margin-bottom: 18px;
+}
+
+.service-list {
+	display: grid;
+	grid-template-columns: 240px 1fr;
+	gap: 20px;
+}
+
+.service-links {
+	background: rgba(0,25,69,0.04);
+	padding: 12px;
+	border-radius: 8px;
+}
+
+.service-links div {
+	padding: 10px 8px;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+.service-links div:hover {
+	background: rgba(224,122,42,0.08);
+}
+
+.service-item {
+	background: #fff;
+	padding: 18px;
+	border-radius: 8px;
+	box-shadow: 0 6px 18px rgba(0,25,69,0.06);
+}
+
+.service-item h3 {
+	margin: 0 0 12px 0;
+	color: #001945;
+}
+
+.service-item p {
+	color: #4a6a85;
+}
+
+@media (max-width: 900px) {
+	.service-list {
+		grid-template-columns: 1fr;
+	}
+
+	.service-links {
+		display: flex;
+		gap: 8px;
+		overflow-x: auto;
+	}
+}
+
+@media (max-width: 480px) {
+	.services {
+		padding: 18px 12px 40px;
+	}
+}

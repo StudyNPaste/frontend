@@ -1,0 +1,211 @@
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  color: #fff;
+  background-color: #001945;
+}
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+  padding: 50px;
+  text-align: left;
+  gap: 50px;
+}
+.hero-left h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 50px;
+  color: white;
+}
+.hero-left p {
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin: 0;
+  color: #f2f4f8;
+}
+.hero-btn{
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+#hero-about {
+  border: #f6efbf solid 2px;
+  background-color: none;
+  color: white;
+  padding: 10px 13px;
+}
+#hero-services {
+  background-color: #c65a16;
+  color: #001945;
+  font-weight: 600;
+}
+#hero-about:hover {
+  background-color: rgba(128, 128, 128, 0.508);
+}
+#hero-services:hover {
+  background-color: #ffa561;
+  color: #001945;
+}
+.hero-btn h5{
+  font-size: 18px;
+  font-weight: 500;
+  color: #001945;
+  padding: 12px 15px;
+  border-radius: 5px;
+}
+
+.hero-right {
+  flex: 0 0 70%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../Assets/stock-photo1.jpg);
+  background-size : cover;
+  background-position: center;
+}
+
+@media (max-width:1660px) {
+  .hero-left {
+    width: 40%;
+    padding: 40px;
+  }
+  .hero-left h2{
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+  .hero-left p{
+    font-size: 16px;
+  }
+  #hero-about,#hero-services {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width:1360px) {
+  .hero {
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(../Assets/stock-photo1.jpg) no-repeat center/cover;
+    position: relative;
+  }
+
+
+  .hero-right {
+    display: none;
+  }
+
+  .hero-left {
+    padding: 80px 60px;
+    background: transparent;
+    z-index: 2;
+    color: #ffffff;
+    width: 50%;
+  }
+
+  .hero-left h2 {
+    font-size: 40px;
+    color: #ffffff;
+    padding-bottom: 20px;
+  }
+
+  .hero-left p {
+    color: #f2f4f8;
+    font-size: 18px;
+  }
+  #hero-about,#hero-services {
+    font-size: 16px;
+  }
+}
+
+@media (max-width:1024px) {
+  .hero {
+    height: 90vh;
+    background-size: cover;
+  }
+
+  .hero-left {
+    width: 60%;
+    padding: 60px 40px;
+  }
+
+  .hero-left h2 {
+    font-size: 36px;
+    padding-bottom: 16px;
+  }
+
+  .hero-left p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width:768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  .hero-left {
+    width: 100%;
+    padding: 30px 24px;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-left h2 {
+    font-size: 30px;
+    padding-bottom: 12px;
+  }
+
+  .hero-left p {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .hero-btn{
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero-btn h5{
+    width: auto;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width:480px) {
+  .hero {
+    padding: 24px 0;
+  }
+
+  .hero-left {
+    padding: 20px 16px;
+  }
+
+  .hero-left h2 {
+    font-size: 22px;
+  }
+
+  .hero-left p {
+    font-size: 14px;
+  }
+
+  .hero-btn h5{
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
