@@ -1,17 +1,20 @@
-import React from 'react';
+import {React, useEffect} from 'react';
 import './CSS/HomePage.css';
 import Hero from '../Components/Hero/Hero';
 import Contact from '../Components/Contact/Contact';
 import Services from '../Components/Services/Services';
 import About from '../Components/About/About';
-import Definitions from '../Components/Definitions/Definitions';
+/*import Definitions from '../Components/Definitions/Definitions';*/
 
 const Home = () => {
+
+  useEffect(()=>{window.scrollTo(0,0);},[]);
+
   return (
     <div className="home">
       <Hero />
       <About />
-      <Definitions />
+      {/*<Definitions />*/}
       <Services />
       <Contact />
     </div>

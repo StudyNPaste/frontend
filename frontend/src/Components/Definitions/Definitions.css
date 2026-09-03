@@ -12,9 +12,11 @@
   display: flex;
   flex-direction: column;
   width: 240px;
-  background-color: #001945;
+  background-color: rgba(0, 25, 69, 0.08);
   padding: 12px;
   border-radius: 8px;
+  margin-top: 10px;
+  border: 1px solid #c65a16;
 }
 
 .term-btn {
@@ -26,16 +28,19 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 6px;
-  color: #f2f4f8;
+  color: #001945;
+  text-decoration: underline #c65a16;
 }
 
 .term-btn:hover {
   background-color: rgba(224, 121, 42, 0.328);
+  
 }
 
 .term-btn.active {
   background-color: rgba(224, 121, 42, 0.559);
   font-weight: 700;
+  text-decoration: none;
 }
 
 .definition-column {
@@ -50,6 +55,7 @@
   font-size: 22px;
   margin-bottom: 12px;
   color: #001945;
+  border-bottom: 1px solid #001945;
 }
 
 .definition-column p {

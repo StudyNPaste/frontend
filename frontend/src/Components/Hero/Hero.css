@@ -1,211 +1,219 @@
 .hero {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  height: 100vh;
-  color: #fff;
+  justify-content: space-between;
   background-color: #001945;
+  height: 95vh;
+  overflow: hidden;
 }
+
+/* LEFT SIDE TEXT */
+
 .hero-left {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 30%;
-  height: 100%;
+  width: 40%;
   padding: 50px;
-  text-align: left;
-  gap: 50px;
+  color: white;
+  gap: 30px;
+}
+.hero-left a{
+  text-decoration: none;
 }
 .hero-left h2 {
+  font-family: "poppins";
   font-size: 40px;
-  font-weight: bold;
-  margin: 0;
-  padding-bottom: 50px;
-  color: white;
+  font-weight: 700;
+  margin-bottom: 200px;
+  animation: fadeIn 0.6s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
 }
+
 .hero-left p {
+  line-height: 1.6;
+  font-family: "inter";
+  font-weight: 500;
   font-size: 18px;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  margin: 0;
-  color: #f2f4f8;
+  animation: fadeIn 0.6s ease forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
 }
-.hero-btn{
+
+/* BUTTON */
+
+.hero-btn {
   display: flex;
   gap: 20px;
-  flex-direction: row;
+  animation: fadeIn 0.6s ease forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
 }
+
 #hero-about {
-  border: #f6efbf solid 2px;
-  background-color: none;
-  color: white;
-  padding: 10px 13px;
-}
-#hero-services {
+  padding: 15px 80px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
   background-color: #c65a16;
-  color: #001945;
+  font-family: "inter";
   font-weight: 600;
+  font-size: 16px;
+  color: #001945;
 }
+
 #hero-about:hover {
-  background-color: rgba(128, 128, 128, 0.508);
-}
-#hero-services:hover {
-  background-color: #ffa561;
-  color: #001945;
-}
-.hero-btn h5{
-  font-size: 18px;
-  font-weight: 500;
-  color: #001945;
-  padding: 12px 15px;
-  border-radius: 5px;
+  transform: translateY(-2px);
+  background-color: #f6efbf;
+  box-shadow: 0 4px 12px rgba(198, 90, 22, 0.4);
 }
 
-.hero-right {
-  flex: 0 0 70%;
+/* RIGHT SIDE CAROUSEL */
+
+.hero-carousel {
+  width: 60%;
+  height: 95vh;
+  position: relative;
+}
+
+.hero-carousel .carousel-inner {
   height: 100%;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../Assets/stock-photo1.jpg);
-  background-size : cover;
-  background-position: center;
 }
 
-@media (max-width:1660px) {
+.hero-carousel .carousel-item {
+  height: 95vh;
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 95vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* DARK OVERLAY */
+
+.hero-carousel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* SLIDE TEXT */
+
+.carousel-caption-custom {
+  position: absolute;
+  bottom: 80px;
+  right: 80px;
+  display: flex;
+  gap: 8px;
+  font-size: 32px;
+  color: #f6efbf;
+  background-color: rgba(0, 25, 69, 0.55);
+  font-family: "poppins";
+  font-weight: 500;
+  padding: 12px 28px;
+  text-shadow: 1px 3px #001945;
+  z-index: 2;
+  border-radius: 6px;
+}
+.carousel-caption-custom h2{
+  font-size: 42px;
+  font-weight: 600;
+  
+}
+
+@media (max-width: 1660px) {
   .hero-left {
-    width: 40%;
     padding: 40px;
-  }
-  .hero-left h2{
-    font-size: 30px;
-    letter-spacing: 1px;
-  }
-  .hero-left p{
-    font-size: 16px;
-  }
-  #hero-about,#hero-services {
-    font-size: 16px;
-  }
-}
-
-
-@media (max-width:1360px) {
-  .hero {
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(../Assets/stock-photo1.jpg) no-repeat center/cover;
-    position: relative;
-  }
-
-
-  .hero-right {
-    display: none;
-  }
-
-  .hero-left {
-    padding: 80px 60px;
-    background: transparent;
-    z-index: 2;
-    color: #ffffff;
-    width: 50%;
-  }
-
-  .hero-left h2 {
-    font-size: 40px;
-    color: #ffffff;
-    padding-bottom: 20px;
-  }
-
-  .hero-left p {
-    color: #f2f4f8;
-    font-size: 18px;
-  }
-  #hero-about,#hero-services {
-    font-size: 16px;
-  }
-}
-
-@media (max-width:1024px) {
-  .hero {
-    height: 90vh;
-    background-size: cover;
-  }
-
-  .hero-left {
-    width: 60%;
-    padding: 60px 40px;
   }
 
   .hero-left h2 {
     font-size: 36px;
-    padding-bottom: 16px;
   }
 
-  .hero-left p {
-    font-size: 16px;
+  .carousel-caption-custom {
+    font-size: 26px;
+    right: 50px;
   }
 }
 
-@media (max-width:768px) {
+@media (max-width: 1300px) {
   .hero {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    padding: 40px 0;
+    
+    text-align: center;
   }
 
-  .hero-right {
+  .hero-btn {
+    justify-content: center;
+  }
+
+  .hero-left {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: #00194585;
+    padding: 50px;
+    border-radius: 8px;
+    width: 70%;
+  }
+
+  .hero-carousel {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-image {
+    height: 100%;
+  }
+
+  .carousel-caption-custom {
     display: none;
   }
+}
 
+@media (max-width: 900px) {
   .hero-left {
-    width: 100%;
-    padding: 30px 24px;
-    text-align: center;
-    gap: 20px;
+    width: 90%;
+    padding: 35px;
   }
 
   .hero-left h2 {
-    font-size: 30px;
-    padding-bottom: 12px;
-  }
-
-  .hero-left p {
-    font-size: 15px;
-    line-height: 1.4;
-  }
-
-  .hero-btn{
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    align-items: center;
-  }
-
-  .hero-btn h5{
-    width: auto;
-    padding: 10px 18px;
+    font-size: 32px;
   }
 }
 
-@media (max-width:480px) {
-  .hero {
-    padding: 24px 0;
-  }
-
+@media (max-width: 460px) {
   .hero-left {
-    padding: 20px 16px;
+    padding: 25px;
   }
-
   .hero-left h2 {
-    font-size: 22px;
+    margin-bottom: 150px;
   }
+}
 
-  .hero-left p {
-    font-size: 14px;
+@media (max-width: 1300px) and (max-height: 750px) {
+  .hero {
+    min-height: 900px;
   }
+  .hero-image{
+    min-height: 900px;
+  }
+  .hero-left {
+    top: 70%;
+  }
+}
 
-  .hero-btn h5{
-    font-size: 14px;
-    padding: 10px 14px;
-  }
+
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
 }

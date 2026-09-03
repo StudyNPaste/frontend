@@ -1,68 +1,31 @@
-import React from 'react';
-import { useSearchParams } from 'react-router-dom';
-import './CSS/ServicesPage.css';
-import Offer from '../Components/Assets/Data/Services'
+import {React, useEffect} from "react";
+import "./CSS/ServicesPage.css";
+import ServiceData from '../Components/Assets/Data/Services';
 
 
-const Service = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const activeIndex = searchParams.get('service') !== null ? parseInt(searchParams.get('service')) : null;
+const ServicesPage = () => {
+
+  useEffect(()=>{window.scrollTo(0,0);},[]);
 
   return (
     <div className="services">
-      <div>
-        <h1>Our Services</h1>
-        <p>We offer a range of services to help adults with intellectual disabilities achieve independent living goals.</p>
+      <div className="service-title">
+        <h2>Independent Living Skills Training</h2>
       </div>
-
-      <div className="service-list">
-        <div className="service-links">
-          {Offer.map((item, index) => {
-            return (
-              <div key={item.id || index} style={{ display: index === activeIndex ? 'none' : 'block' }}>
-                <div onClick={() => setSearchParams({ service: index })}>{item.term || item.title}</div>
+      {ServiceData.map((service, index) => (
+            <div className="hp-service-item">
+              <div className='hp-services-left'>
+                {/*<h3>{service.term || service.title}</h3>*/}
+                <p id='hp-service-info'>{service.definition || service.description}</p>
               </div>
-            );
-          })}
-        </div>
-
-        <div className="service-item">
-          {activeIndex === null ? (
-            Offer.map((item, index) => (
-              <div key={item.id || index}>
-                <h3>{item.term || item.title}</h3>
-                <p>{item.definition || item.description}</p>
-              </div>
-            ))
-          ) : (
-            <div>
-              <h3>{Offer[activeIndex].term || Offer[activeIndex].title}</h3>
-              <p>{Offer[activeIndex].definition || Offer[activeIndex].description}</p>
-              <div>
-                <button onClick={() => setSearchParams({})}>Close</button>
-              </div>
-              <div>
-                <h4>{Offer[activeIndex].bulletsTitle[0]}</h4>
-                <ul>
-                  {Offer[activeIndex].bulletsA.map((bullet, i) => (
-                    <li key={i}>{bullet}</li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4>{Offer[activeIndex].bulletsTitle[1]}</h4>
-                <ul>
-                  {Offer[activeIndex].bulletsB.map((bullet, i) => (
-                    <li key={i}>{bullet}</li>
-                  ))}
-                </ul>
+              <div className='hp-services-right'>
+                <h4>{service.bulletsTitle[0]}</h4>
+                <ul>{service.bulletsA.map((b, i) => (<li key={i}>{b}</li>))}</ul>
               </div>
             </div>
-          )}
-        </div>
-      </div>
+        ))}
     </div>
   );
 };
 
-export default Service;
+export default ServicesPage;

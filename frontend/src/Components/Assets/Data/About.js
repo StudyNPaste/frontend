@@ -22,6 +22,11 @@ const DefinitionsData = [
     term: "Cerebral Palsy",
     definition:
       "Cerebral Palsy is a neurological disorder that affects movement, muscle tone, and posture due to damage to the developing brain, usually before or shortly after birth. It can cause difficulties with coordination, balance, and motor skills, and the severity varies widely from person to person. Cerebral palsy is not progressive, meaning it does not worsen over time, and it does not affect intelligence in every case. Although there is no cure, therapy, medication, and assistive devices can help individuals with cerebral palsy improve their quality of life."
+  },
+  {
+    id: "Developmental Disability",
+    term:"Developmental Disability",
+    definition: "Developmental disability means a disability that originates before an individual attains 18 years of age, continues, or can be expected to continue, indefinitely, and constitutes a substantial disability for that individual. As defined by the Director of Developmental Services, in consultation with the Superintendent of Public Instruction, this term shall include intellectual disability, cerebral palsy, epilepsy, and autism. This term shall also include disabling conditions found to be closely related to intellectual disability or to require treatment similar to that required for individuals with an intellectual disability, but shall not include other handicapping conditions that are solely physical in nature."
   }
 ];
 

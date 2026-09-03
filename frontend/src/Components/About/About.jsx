@@ -1,32 +1,27 @@
 import React from 'react';
 import './About.css';
-import { Link } from 'react-router-dom';
-import aboutpic from '../Assets/about.jpg';
+
 
 const About = () => {
   return (
     <div className='about'>
       <div className="about-title-box">
           <h2>About Us</h2>
-          <p><i>"Rodgers Consulting Services offers exemplary support systems in which people with intellectual disabilities have rightful opportunities to excel in life with enhanced independence and strengthened abilities."</i></p>
+          <p><i>Rodgers Consulting Services Inc., it is our mission to positively impact the lives of our consumers by providing compassionate care, training and support with their functional and basic self-help skills.  We are dedicated to empowering our consumers to live, learn and thrive as active members of their communities, promoting greater independence and a higher quality of life.  We are committed to fostering a sense of dignity, self-worth and achievement.</i></p>
       </div>
       <div className='about-container'>
         <div className='about-content'>
           <div className='about-left'>
-            <img src={aboutpic} alt="About Us" />
+            <img src="/images/about.jpg" alt="About Us" />
           </div>
           <div className='about-right'>
             <div className="about-image-text">
-              <img src='' alt="" />
-              <p>Our caring professional training and support to help individuals gain the skills and confidence needed for independent living.</p>
+              <p>With the help of our caring and supportive staff <span id='company'>Rodgers Consulting Services Inc.,</span> gives consumers an opportunity to excel in living a more independent life with confidence and strengthened abilities.</p>
             </div>
             <div className="about-image-text">
               <img src="" alt="" />
-              <p>We believe in creating personalized plans that meet the unique needs of each individual.</p>
+              <p>In joint relationship with the Regional Center and <span id='company'>Rodgers Consulting Services Inc.,</span> a personalized plan is developed for each consumer with specific goals toward greater skills and abilities.</p>
             </div>
-            <Link to='/about'><div>
-              <h3>Learn More About Us</h3>
-            </div></Link>
           </div>
         </div>
       </div>

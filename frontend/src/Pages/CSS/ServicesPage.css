@@ -1,16 +1,56 @@
 .services {
-	padding: 28px 20px 60px;
+	padding:0 0px 20px 0px;
+	justify-content: flex-start;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+	height: 100%;
+	min-height: 1000px;
+}
+.service-title h2{
+	font-family: 'poppins';
+	font-weight: 700;
+	font-size: 32px;
+	text-align: center;
 }
 
-.services > div:first-child {
-	max-width: 900px;
-	margin-bottom: 18px;
-}
-
-.service-list {
-	display: grid;
-	grid-template-columns: 240px 1fr;
+/*.service-list {
+	display: flex;
 	gap: 20px;
+	width: 60%;
+	justify-content: center;
+	padding: 100px 0;
+}
+
+.service-summary {
+	background-color: rgba(0, 25, 69, 0.08);
+	padding: 18px;
+	border-radius: 8px;
+	box-shadow: 0 6px 18px rgba(0,25,69,0.06);
+	color: #001945;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.2s ease;
+	width: 100%;
+	height: 250px;
+	justify-content: flex-end;
+}
+
+.service-summary h3 {
+	margin: 0 0 8px 0;
+	font-size: 18px;
+}
+
+.service-summary p {
+	margin: 0;
+	color: #4a6a85;
+	font-size: 14px;
+}
+
+.service-summary:hover {
+	transform: translateY(-4px);
 }
 
 .service-links {
@@ -44,10 +84,15 @@
 .service-item p {
 	color: #4a6a85;
 }
-
+@media (max-width: 1660px) {
+	.service-list {
+		width: 85%;
+	}
+}
 @media (max-width: 900px) {
 	.service-list {
 		grid-template-columns: 1fr;
+		width: 92%;
 	}
 
 	.service-links {
@@ -59,6 +104,101 @@
 
 @media (max-width: 480px) {
 	.services {
-		padding: 18px 12px 40px;
+		padding: 0;
 	}
+}
+/* this is title details*/
+.services .hp-service-item{
+	animation: fadeIn 0.6s ease forwards;
+  	animation-delay: 0.6s;
+  	opacity: 0;
+}
+.service-detail{
+	width: 100%;
+	display: flex;
+	align-items: stretch;
+}
+
+.service-title {
+	display: flex;
+	height: 400px;
+	width: 100%;
+	color: #fff;
+	background: linear-gradient( rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.5)), url(../../../public/images/servicebgpage.jpg);
+	background-size : cover;
+  	background-position: center;
+	justify-content: center;
+	align-items: center;
+}
+.service-title h2{
+	animation: fadeIn 0.6s ease forwards;
+  	animation-delay: 0.3s;
+  	opacity: 0;
+}
+
+.service-detail {
+  display: flex;
+  gap: 50px;
+  height: 100%;
+}
+.service-container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.service-left {
+  width: 50%;
+}
+.service-right{
+	width: 50%;
+	padding: 30px;
+	border-left: 1px solid #001945 ;
+}
+.service-right h4{
+	font-family: 'poppins';
+	font-size: 16px;
+	padding-bottom: 20px;
+	font-weight: 600;
+	color: #c65a16;
+	text-decoration: underline #c65a16;
+}
+.service-detail h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+.services-right ul{
+	display: grid;
+  	grid-template-columns: repeat(2, 1fr);
+  	gap: 10px 40px;
+	color: #001945;
+	font-family: 'inter',sans-serif;
+}
+
+@media (max-width: 1270px) {
+	.services .hp-services-item{
+		background-color: none;
+	}
+}
+
+@media (max-width: 900px) {
+	.hp-services-right h4{
+		font-size: 20px;
+
+	}
+}
+
+@media (max-width: 480px) {
+	.service-title h2{
+		font-size: 24px;
+		
+	}
+}
+
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
 }

@@ -11,7 +11,7 @@
 .about-title-box{
   display: flex;
   flex-direction: column;
-  padding: 60px ;
+  padding: 100px 5%;
   gap: 20px;
   text-align: center;
   align-items: center;
@@ -20,7 +20,8 @@
 }
 .about-title-box h2 {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 600;
+  font-family: 'Poppins';
   color: #001945;
   border-bottom: 1px solid #001945;
   padding-bottom: 5px;
@@ -29,6 +30,8 @@
 }
 .about-title-box p {
   font-size: 18px;
+  font-family: 'inter';
+  font-weight: 400;
   color:#f6efbf9f;
   margin: 0;
 }
@@ -52,25 +55,34 @@
 .about-right {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 80px;
   width: 50%;
-  padding: 20px;
-  justify-content: space-between;
+  color: #001945;
+  padding:7% 3%;
+  justify-content: center;
 }
 
 .about-image-text {
   display: flex;
   flex-direction: column;
+  font-family: 'inter';
+  font-weight: 500;
   gap: 12px;
+  
 }
 
 .about-image-text p {
-  font-size: 16px;
+  font-size: 20px;
   color: #001945;
+  font-family: 'inter';
+  font-weight: 400;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.75;
 }
-
+#company{
+  color: #c65a16;
+  font-weight: 600;
+}
 .about-right a {
   text-decoration: none;
   display: inline-block;
@@ -100,7 +112,21 @@
   box-shadow: 0 4px 12px rgba(198, 90, 22, 0.3);
   transform: translateY(-2px);
 }
-
+@media (max-width: 1660px) {
+  .about-right{
+    padding: 0 3%;
+    justify-content: center;
+    gap: 40px;
+  }
+  .about-right p{
+    font-size: 18px;
+  }
+}
+@media (max-width: 1250px) {
+  .about-right p{
+    font-size: 16px;
+  }
+}
 @media (max-width: 1024px) {
 
   .about-container {
@@ -115,15 +141,19 @@
   .about-left {
     width: 100%;
   }
+  .about-right p{
+    font-size: 18px;
+  }
 
   .about-right {
     width: 100%;
+    padding: 100px 3%;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .about-title-box{
-    padding: 40px 20px;
+    padding: 50px 3%;
   }
 
   .about-title-box h2 {
@@ -133,15 +163,23 @@
   .about-title-box p {
     font-size: 16px;
   }
+  
 }
 
 @media (max-width: 480px) {
 
   .about-title-box h2 {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .about-title-box p {
-    font-size: 14px;
+    font-size: 15px;
+  }
+  .about-right{
+    gap: 20px;
+    padding: 60px 5%;
+  }
+  .about-right p{
+    font-size: 16px;
   }
 }

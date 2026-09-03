@@ -2,24 +2,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 20px;
-  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0,0,0,0.40)), url(../Assets/contact.jpg);
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0, 25, 69, 0.35), rgba(0, 25, 69, 0.35)), url(../../../public/images/contact.jpg);
   background-size : cover;
   background-position: center;
+}
+.contact p {
+  font-size: 22px;
+  line-height: 1.5;
+  color: white;
+  text-align: center;
+  max-width: 600px;
+  font-family: 'inter';
 }
 .contact h2 {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #333;
+  color: white;
 }
-.contact p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #666;
-  text-align: center;
-  max-width: 600px;
-}
+
 .btn-container {
   display: flex;
   gap: 20px;
@@ -33,17 +35,26 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+#contact-about-btn {
+  background-color: #001945;
+}
+#contact-about-btn:hover {
+  background-color: #253858;
+}
+#contact-services-btn {
+  background-color: #c65a16;
+}
+#contact-services-btn:hover {
+  background-color: #e07a2a;
+}
 
 @media (max-width: 1000px) {
-  .contact {
-    padding: 30px 10px;
-  }
   .contact h2 {
     font-size: 26px;
   }
   .contact p {
-    font-size: 16px;
-    max-width: 100%;
+    font-size: 20px;
+    max-width: 90%;
   }
   .btn-container {
     gap: 15px;
@@ -54,15 +65,16 @@
   }
 }
 @media (max-width:550px) {
-  .contact {
-    padding: 20px 10px;
+  .contact{
+    padding: 70px 20px;
   }
   .contact h2 {
-    font-size: 22px;
+    margin-bottom: 10px;
   }
   .contact p {
-    font-size: 14px;
     max-width: 100%;
+    font-size: 18px;
+    
   }
   .btn-container {
     flex-direction: column;
@@ -71,12 +83,12 @@
   }
   .contact-btn {
     padding: 10px 50px;
-    font-size: 14px;
+
   }
 }
 @media (max-width:380px) {
   .contact {
-    padding: 15px 5px;
+    padding: 40px 10px;
   }
   .contact h2 {
     font-size: 18px;

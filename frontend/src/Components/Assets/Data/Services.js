@@ -5,7 +5,7 @@ import advocacyImg from "../Images/Services/advocacy.jpg";*/
 
 
 const ServiceData = [
-  {
+  /*{
     id: 'Adaptive Skills Training',
     term: "Adaptive Skills Training",
     definition:
@@ -33,38 +33,35 @@ const ServiceData = [
         "in lieu of day program - client and family choice, a 100% personalized day program"
     ],
     image: "",
-  },
+  },*/
   {
-    id: "Independent Living Skills",
-    term: "Independent Living Skills",
+    id: "Independent Living Skills Training",
+    term: "Independent Living Skills Training",
     definition:
-      "Independent living skills training helps individuals with intellectual disabilities learn and practice essential life skills needed for independent living, such as managing money, cooking, cleaning, and maintaining personal hygiene.",
+      "Independent living skills training helps adults with intellectual disabilities learn essential life skills needed for a life of independent living",
     bulletsTitle: [
-        "Training is provided in the following areas:",
+        "Training Areas:"
     ],
     bulletsA: [
-      "Cooking and meal preparation",
-      "Managing household tasks",
-      "Personal hygiene and self-care",
-      "Budgeting and money management",
-      "Safety and emergency preparedness",
-      "Transportation skills training"
+      "Money Management",
+      "Mobility and Travel Training",
+      "Shopping",
+      "Home Cleaning Skills",
+      "DMV Written Examination",
+      "Self-Advocacy",
+      "Community Resources",
+      "Home and Community Safety",
+      "Personal Hygiene and Grooming Skills",
+      "Meal Planning, Preparation and Nutrition",
+      "Social and Recreation"
     ],
-    bulletsB: [
-        "Meal/Menu Preparation",
-        "Medical and Mental Health Care",
-        "Money Management",
-        "Bill Paying",
-        "Personal Hygiene and Grooming",
-        "Recreation, Social and Leisure",
-        "Self-Advocacy",
-        "Shopping",
-        "Social Security Issues",
+    /*bulletsB: [
+        ,
         "Social Development",
-    ],
+    ],*/
     image: "",
   },
-  {
+  /*{
     id: "Supportive Living Services",
     term: "Supportive Living Services",
     definition:
@@ -107,7 +104,7 @@ const ServiceData = [
     bulletsB: [
     ],
     image: "",
-  }
+  }*/
 ];
 
 export default ServiceData;

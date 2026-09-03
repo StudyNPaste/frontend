@@ -3,6 +3,7 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 import ServiceData from "../Assets/Data/Services";
 
+
 const Footer = () => {
   const year = new Date().getFullYear();
 
@@ -10,10 +11,11 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-left">
-          <h3 className="footer-title">Rodgers Consulting Services</h3>
+          <h3 className="footer-title">Rodgers <span id="footer-text">Consulting Services Inc.</span></h3>
           <img
             className="footer-logo-img"
-            src="/logo192.png"
+            src="/images/logo1.png"
+            fetchpriority="high"
             alt="Rodgers Consulting Services logo"
           />
         </div>
@@ -23,7 +25,15 @@ const Footer = () => {
             <h6 className="footer-header">Company</h6>
             <Link to="/">Home</Link>
             <Link to="/about">About Us</Link>
-            <Link to="/services">Services</Link>
+            {ServiceData.slice(0, 4).map((service, index) => (
+              <Link
+                id="footer-service-links"
+                key={service.id || index}
+                to='/services'>
+                Services
+              </Link>
+            ))}
+            <Link to='/contact'>Contact Us</Link>
           </div>
 
           <div className="footer-nav-links">
@@ -32,7 +42,7 @@ const Footer = () => {
               <Link
                 id="footer-service-links"
                 key={service.id || index}
-                to={`/services?service=${index}`}>
+                to='/services'>
                 {service.term}
               </Link>
             ))}
@@ -41,7 +51,8 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© {year} Rodgers Consulting Services. All rights reserved.</p>
+        <p>Proudly Serving Intellectual Disabled Adults in SARC, RCEB, and ACRC</p>
+        <p>All rights reserved. Rodgers Consulting Services Inc. © {year} </p>
       </div>
     </footer>
   );
